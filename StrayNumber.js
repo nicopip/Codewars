@@ -1,7 +1,6 @@
 //Stray number
 
-function stray(numbers) {
-    let number = 0
-    numbers.forEach(x => numbers.indexOf(x) ? number = x : null)
-    return number
-  }
+const stray = numbers =>
+  numbers.find(
+    number => numbers.indexOf(number) === numbers.lastIndexOf(number)
+  )
